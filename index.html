@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>何厝社區特色商品｜線上下單</title>
+<title>何厝社區特色商品訂購</title>
 
 <style>
 
@@ -14,14 +14,14 @@
 
 body{
   margin:0;
-  font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;
   background:#f7efe6;
-  color:#4d3425;
+  font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;
+  color:#4d3728;
 }
 
 .hero{
-  background:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
-  url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1200&auto=format&fit=crop");
+  background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+  url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1200&auto=format&fit=crop');
   background-size:cover;
   background-position:center;
   color:white;
@@ -31,17 +31,17 @@ body{
 
 .hero h1{
   margin:0;
-  font-size:38px;
-  letter-spacing:3px;
+  font-size:36px;
+  letter-spacing:2px;
 }
 
 .hero p{
-  margin-top:14px;
+  margin-top:12px;
   font-size:18px;
 }
 
 .wrap{
-  max-width:980px;
+  max-width:900px;
   margin:auto;
   padding:24px 16px 80px;
 }
@@ -49,71 +49,142 @@ body{
 .card{
   background:white;
   border-radius:24px;
-  overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,.15);
+  padding:24px;
+  box-shadow:0 8px 24px rgba(0,0,0,.12);
 }
 
-.top-info{
-  padding:28px 24px;
-  background:#fff8f0;
-  border-bottom:1px solid #ecd9c7;
-}
-
-.top-info h2{
-  margin:0;
+.section-title{
+  margin:32px 0 18px;
+  font-size:24px;
   color:#8a5a3b;
-  font-size:28px;
+  border-bottom:2px dashed #d9bea4;
+  padding-bottom:10px;
 }
 
-.top-info p{
-  margin:12px 0 0;
-  line-height:1.9;
-  color:#6d5848;
-}
-
-.notice{
+label{
+  display:block;
   margin-top:18px;
-  background:#fff2df;
-  border:1px solid #e4c4a1;
-  padding:16px;
+  font-weight:bold;
+}
+
+input[type=text],
+input[type=tel],
+textarea,
+select{
+  width:100%;
+  margin-top:8px;
+  padding:14px;
+  border-radius:14px;
+  border:1px solid #d8c0a8;
+  font-size:16px;
+}
+
+textarea{
+  min-height:90px;
+}
+
+.product{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  padding:16px 0;
+  border-bottom:1px dashed #ead6c2;
+}
+
+.product-info{
+  flex:1;
+}
+
+.product-name{
+  font-size:18px;
+  font-weight:bold;
+}
+
+.product-price{
+  color:#b35f1d;
+  margin-top:4px;
+  font-size:18px;
+}
+
+.qty{
+  width:110px;
+}
+
+.qty input{
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid #d5b99e;
+  text-align:center;
+  font-size:18px;
+}
+
+.total-box{
+  margin-top:28px;
+  background:#8a5a3b;
+  color:white;
+  border-radius:18px;
+  padding:24px;
+  text-align:center;
+}
+
+.total-box h2{
+  margin:0;
+}
+
+.total-price{
+  margin-top:10px;
+  font-size:42px;
+  font-weight:bold;
+}
+
+.submit-btn{
+  width:100%;
+  border:none;
+  background:#d67d2f;
+  color:white;
+  padding:18px;
+  border-radius:999px;
+  font-size:22px;
+  font-weight:bold;
+  margin-top:24px;
+}
+
+.note{
+  margin-top:24px;
+  background:#fff4e8;
+  border:1px solid #e5c5a7;
   border-radius:16px;
+  padding:18px;
   line-height:1.8;
 }
 
-iframe{
-  width:100%;
-  height:2600px;
-  border:none;
-  background:white;
-}
-
-.footer{
+.success{
+  display:none;
+  margin-top:24px;
+  background:#e9f8ee;
+  border:1px solid #9fd2b0;
+  color:#267d45;
+  border-radius:16px;
+  padding:20px;
   text-align:center;
-  padding:30px 20px 50px;
-  color:#7d6757;
-  line-height:1.9;
-}
-
-.footer strong{
-  color:#8a5a3b;
+  font-weight:bold;
 }
 
 @media(max-width:640px){
-
-.hero{
-  padding:56px 20px;
-}
 
 .hero h1{
   font-size:30px;
 }
 
-.top-info h2{
-  font-size:24px;
+.product{
+  flex-direction:column;
+  align-items:flex-start;
 }
 
-iframe{
-  height:2800px;
+.qty{
+  width:100%;
 }
 
 }
@@ -125,43 +196,214 @@ iframe{
 
 <div class="hero">
   <h1>何厝社區特色商品</h1>
-  <p>金門在地風味｜手作點心｜特色番薯酒</p>
+  <p>金門縣金沙鎮何厝社區發展協會 ❤️</p>
 </div>
 
 <div class="wrap">
 
-  <div class="card">
+<div class="card">
 
-    <div class="top-info">
+<form id="orderForm">
 
-      <h2>線上下單專區</h2>
+<div class="section-title">訂購人資料</div>
 
-      <p>
-        歡迎選購何厝社區特色商品 ❤️<br>
-        感受金門在地的人情味與古早風味。
-      </p>
+<label>姓名</label>
+<input type="text" id="name" required>
 
-      <div class="notice">
-        📌 取貨方式如選擇：<br>
-        「其他（請備註填寫送貨地址）」<br>
-        請於表單備註欄填寫完整送貨地址。
-      </div>
+<label>聯絡電話</label>
+<input type="tel" id="phone" required>
 
-    </div>
+<label>取貨方式</label>
+<select id="delivery">
+  <option>現場取貨</option>
+  <option>其他（請於備註填寫送貨地址）</option>
+</select>
 
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSe_RJWN0JZhs_9vIktkL6BqF2HAYhqEFY2Aoxs7hVzCfhjlug/viewform?embedded=true">
-      載入中…
-    </iframe>
+<div class="section-title">商品選購</div>
 
-  </div>
+<div id="products"></div>
+
+<label>備註</label>
+<textarea id="note" placeholder="若選擇送貨，請填寫完整地址"></textarea>
+
+<div class="total-box">
+  <h2>訂單總金額</h2>
+  <div class="total-price">$<span id="total">0</span></div>
+</div>
+
+<button type="submit" class="submit-btn">
+立即送出訂單
+</button>
+
+<div class="success" id="successMsg">
+✅ 訂單已成功送出！<br><br>
+我們收到後將與您聯繫確認 ❤️
+</div>
+
+</form>
+
+<div class="note">
+📌 部分商品為手工製作，數量有限<br>
+📌 酒類商品請確認已滿18歲<br>
+📌 如需大量訂購，請於備註欄說明
+</div>
 
 </div>
 
-<div class="footer">
-  <strong>金門縣金沙鎮何厝社區發展協會</strong><br>
-  感謝您的支持與訂購 🌿
 </div>
+
+<script>
+
+const WEB_APP_URL =
+"https://script.google.com/macros/s/AKfycbxPVzjeAbnCgqJ8DBgz9dkemKNuFYadIfeeglqtyFQ8WVjkbArIPg0tMWryYf4kY1YjYQ/exec";
+
+const productData = [
+
+{ key:"product1", name:"安簽", price:80 },
+{ key:"product2", name:"番薯餅（原味）", price:35 },
+{ key:"product3", name:"番薯餅禮盒（6入）", price:200 },
+{ key:"product4", name:"番薯酒香腸", price:50 },
+{ key:"product5", name:"原味蛋塔", price:35 },
+{ key:"product6", name:"土仁粿（花生、地瓜）", price:20 },
+{ key:"product7", name:"59度番薯酒", price:880 },
+{ key:"product8", name:"36度番薯酒", price:800 },
+{ key:"product9", name:"22度番薯酒", price:320 },
+{ key:"product10", name:"17度桑葚番薯酒", price:360 }
+
+];
+
+const productsEl = document.getElementById("products");
+const totalEl = document.getElementById("total");
+
+productData.forEach(item=>{
+
+productsEl.innerHTML += `
+
+<div class="product">
+
+<div class="product-info">
+<div class="product-name">${item.name}</div>
+<div class="product-price">$${item.price}</div>
+</div>
+
+<div class="qty">
+<input
+type="number"
+min="0"
+value="0"
+id="${item.key}"
+data-price="${item.price}">
+</div>
+
+</div>
+
+`;
+
+});
+
+function calcTotal(){
+
+let total = 0;
+
+productData.forEach(item=>{
+
+const qty =
+parseInt(document.getElementById(item.key).value) || 0;
+
+total += qty * item.price;
+
+});
+
+totalEl.innerText = total.toLocaleString();
+
+}
+
+document
+.querySelectorAll("input[type=number]")
+.forEach(input=>{
+
+input.addEventListener("input",calcTotal);
+
+});
+
+calcTotal();
+
+document
+.getElementById("orderForm")
+.addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+const data = {
+
+name:
+document.getElementById("name").value,
+
+phone:
+document.getElementById("phone").value,
+
+delivery:
+document.getElementById("delivery").value,
+
+product1:
+document.getElementById("product1").value,
+
+product2:
+document.getElementById("product2").value,
+
+product3:
+document.getElementById("product3").value,
+
+product4:
+document.getElementById("product4").value,
+
+product5:
+document.getElementById("product5").value,
+
+product6:
+document.getElementById("product6").value,
+
+product7:
+document.getElementById("product7").value,
+
+product8:
+document.getElementById("product8").value,
+
+product9:
+document.getElementById("product9").value,
+
+product10:
+document.getElementById("product10").value,
+
+total:
+document.getElementById("total").innerText,
+
+note:
+document.getElementById("note").value
+
+};
+
+await fetch(WEB_APP_URL,{
+
+method:"POST",
+body:JSON.stringify(data)
+
+});
+
+document.getElementById("successMsg").style.display="block";
+
+document.getElementById("orderForm").reset();
+
+calcTotal();
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+});
+
+</script>
 
 </body>
 </html>
