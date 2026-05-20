@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>何厝社區特色商品｜線上下單</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;
+  background:#f7efe6;
+  color:#4d3425;
+}
+
+.hero{
+  background:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
+  url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1200&auto=format&fit=crop");
+  background-size:cover;
+  background-position:center;
+  color:white;
+  text-align:center;
+  padding:70px 20px;
+}
+
+.hero h1{
+  margin:0;
+  font-size:38px;
+  letter-spacing:3px;
+}
+
+.hero p{
+  margin-top:14px;
+  font-size:18px;
+}
+
+.wrap{
+  max-width:760px;
+  margin:auto;
+  padding:24px 16px 80px;
+}
+
+.card{
+  background:white;
+  border-radius:22px;
+  padding:24px;
+  margin-top:-40px;
+  box-shadow:0 8px 24px rgba(0,0,0,.12);
+}
+
+.section-title{
+  font-size:24px;
+  margin:32px 0 18px;
+  padding-bottom:10px;
+  border-bottom:2px dashed #d8b48c;
+  color:#8a5a3b;
+  font-weight:bold;
+}
+
+.product{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+  padding:16px 0;
+  border-bottom:1px dashed #ead6c2;
+}
+
+.product-name{
+  flex:1;
+}
+
+.product-name h3{
+  margin:0;
+  font-size:18px;
+}
+
+.product-name p{
+  margin:6px 0 0;
+  color:#8b6c57;
+  font-size:14px;
+}
+
+.price{
+  font-size:18px;
+  font-weight:bold;
+  color:#8a4b24;
+}
+
+.qty{
+  width:90px;
+}
+
+.qty input{
+  width:100%;
+  padding:10px;
+  border-radius:12px;
+  border:1px solid #d0b49b;
+  font-size:16px;
+  text-align:center;
+}
+
+.info-box{
+  background:#fff7ef;
+  border:1px solid #e5c8aa;
+  padding:18px;
+  border-radius:16px;
+  margin-top:24px;
+}
+
+label{
+  display:block;
+  margin-top:18px;
+  font-weight:bold;
+}
+
+input[type=text],
+input[type=tel],
+textarea,
+select{
+  width:100%;
+  margin-top:8px;
+  padding:14px;
+  border-radius:14px;
+  border:1px solid #d8c0a8;
+  font-size:16px;
+}
+
+textarea{
+  min-height:90px;
+}
+
+.total-box{
+  margin-top:28px;
+  background:#8a5a3b;
+  color:white;
+  padding:20px;
+  border-radius:18px;
+  text-align:center;
+}
+
+.total-box h2{
+  margin:0;
+  font-size:18px;
+}
+
+.total-price{
+  font-size:38px;
+  margin-top:10px;
+  font-weight:bold;
+}
+
+.submit-btn{
+  width:100%;
+  border:none;
+  background:#d67d2f;
+  color:white;
+  padding:18px;
+  border-radius:999px;
+  font-size:22px;
+  font-weight:bold;
+  margin-top:24px;
+}
+
+.footer-note{
+  text-align:center;
+  margin-top:28px;
+  color:#7a6557;
+  line-height:1.8;
+}
+
+@media(max-width:640px){
+
+.hero h1{
+  font-size:30px;
+}
+
+.product{
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.qty{
+  width:100%;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>何厝社區特色商品</h1>
+  <p>金門在地風味｜手作點心｜特色番薯酒</p>
+</div>
+
+<div class="wrap">
+
+<div class="card">
+
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSe_RJWN0JZhs_9vIktkL6BqF2HAYhqEFY2Aoxs7hVzCfhjlug/formResponse" method="POST" target="_blank">
+
+<div class="section-title">訂購人資料</div>
+
+<label>姓名</label>
+<input type="text" name="entry.111111111" required>
+
+<label>聯絡電話</label>
+<input type="tel" name="entry.222222222" required>
+
+<label>取貨方式</label>
+<select name="entry.333333333">
+  <option>現場取貨</option>
+  <option>宅配寄送</option>
+  <option>其他</option>
+</select>
+
+<label>收件地址</label>
+<textarea name="entry.444444444"></textarea>
+
+<div class="section-title">商品選購</div>
+
+<div class="product">
+  <div class="product-name">
+    <h3>安簽</h3>
+    <p>金門特色乾貨</p>
+  </div>
+  <div class="price">$80</div>
+  <div class="qty">
+    <input type="number" min="0" value="0" data-price="80">
+  </div>
+</div>
+
+<div class="product">
+  <div class="product-name">
+    <h3>番薯餅（原味）</h3>
+    <p>香甜古早味</p>
+  </div>
+  <div class="price">$35</div>
+  <div class="qty">
+    <input type="number" min="0" value="0" data-price="35">
+  </div>
+</div>
+
+<div class="product">
+  <div class="product-name">
+    <h3>番薯餅禮盒（6入）</h3>
+    <p>送禮推薦</p>
+  </div>
+  <div class="price">$200</div>
+  <div class="qty">
+    <input type="number" min="0" value="0" data-price="200">
+  </div>
+</div>
+
+<div class="product">
+  <div class="product-name">
+    <h3>番薯酒香腸</h3>
+    <p>特色風味</p>
+  </div>
+  <div class="price">$50</div>
+  <div class="qty">
+    <input type="number" min="0" value="0" data-price="50">
+  </div>
+</div>
+
+<div class="product">
+  <div class="product-name">
+    <h3>原味蛋塔</h3>
+    <p>人氣點心</p>
+  </div>
+  <div class="price">$35</div>
+  <div class="qty">
+    <input type="number" min="0" value="0" data-price="35">
+  </div>
+</div>
+
+<div class="product">
+  <div class="product-name">
+    <h3>土仁粿（花生、地瓜）</h3>
+    <p>傳統美食</p>
+  </div>
+  <div class="price">$20</div>
+  <div class="qty">
+    <input type="number" min="0" value="0" data-price="20">
+  </div>
+</div>
+
+<div class="section-title">酒類商品</div>
+
+<div class="product">
+  <div class="product-name">
+    <h3>59度番薯酒</h3>
+  </div>
+  <div class="price">$880</div>
+  <div class="qty">
+    <input type="number" min="0" value="0" data-price="880">
+  </div>
+</div>
+
+<div class="product">
+  <div class="product-name">
+    <h3>36度番薯酒</h3>
+  </div>
+  <div class="price">$800</div>
+  <div class="qty">
+    <input type="number" min="0" value="0" data-price="800">
+  </div>
+</div>
+
+<div class="product">
+  <div class="product-name">
+    <h3>22度番薯酒</h3>
+  </div>
+  <div class="price">$320</div>
+  <div class="qty">
+    <input type="number" min="0" value="0" data-price="320">
+  </div>
+</div>
+
+<div class="product">
+  <div class="product-name">
+    <h3>17度桑葚番薯酒</h3>
+  </div>
+  <div class="price">$360</div>
+  <div class="qty">
+    <input type="number" min="0" value="0" data-price="360">
+  </div>
+</div>
+
+<label>備註</label>
+<textarea placeholder="例如：希望取貨時間、送禮需求、其他問題"></textarea>
+
+<div class="total-box">
+  <h2>目前訂單金額</h2>
+  <div class="total-price">$<span id="total">0</span></div>
+</div>
+
+<button class="submit-btn">
+立即送出訂單
+</button>
+
+<div class="footer-note">
+感謝支持何厝社區特色商品 ❤️<br>
+送出後我們將盡快與您聯繫確認。
+</div>
+
+</form>
+
+</div>
+</div>
+
+<script>
+const qtyInputs = document.querySelectorAll('.qty input');
+const totalEl = document.getElementById('total');
+
+function calcTotal(){
+
+let total = 0;
+
+qtyInputs.forEach(input=>{
+
+const qty = parseInt(input.value) || 0;
+const price = parseInt(input.dataset.price);
+
+total += qty * price;
+
+});
+
+totalEl.innerText = total.toLocaleString();
+
+}
+
+qtyInputs.forEach(input=>{
+
+input.addEventListener('input',calcTotal);
+
+});
+
+calcTotal();
+</script>
+
+</body>
+</html>
